@@ -8,4 +8,4 @@ Built in Python for Electrical Engineers.
 
 from .phasor import Phasor, alpha
 
-__version__ = "0.0.0"
+__version__ = "0.0.1"
