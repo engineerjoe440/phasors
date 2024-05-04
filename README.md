@@ -11,9 +11,9 @@ for advanced electrical engineering or other phasor-based work.
 
 ## Installation
 
-```
-pip install phasor
-```
+Installing is as simple as:
+
+    pip install phasors
 
 ## Usage
 
