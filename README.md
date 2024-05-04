@@ -1,7 +1,7 @@
 
 
 
-# Phasor
+# Phasors
 
 *A means to measure complex values with magnitude and angle.*
 
