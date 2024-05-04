@@ -34,6 +34,7 @@ testpaths = [
 
 [pydocstyle]
 convention = "numpy"
+match-dir = "phasors/*"
 
 [tool.pytest]
 addopts = "--pydocstyle"
