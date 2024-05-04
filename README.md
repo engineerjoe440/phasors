@@ -12,7 +12,7 @@
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/engineerjoe440)
 
-The `phasor` package provides a means to work with complex numbers in their
+The `phasors` package provides a means to work with complex numbers in their
 polar coordinate form (with a magnitude and angle) allowing simple computation
 for advanced electrical engineering or other phasor-based work.
 
