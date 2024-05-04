@@ -30,5 +30,5 @@ from phasor import Phasor
 voltage = Phasor(67, 120)
 
 print(voltage)
-# 67 ∠ 120°
+# 67.0 ∠ 119.99999999999999°
 ```

@@ -27,18 +27,18 @@ class Phasor(complex):
 
     Examples
     --------
-    >>> from electricpy._phasor import Phasor
+    >>> from phasors import Phasor
     >>> Phasor(67, 120) # 67 volts at angle 120 degrees
-    Phasor(magnitude=67, angle=120)
+    Phasor(magnitude=67.0, angle=119.99999999999999)
     >>> volt = Phasor(67, 120)
     >>> print(volt)
-    67 ∠ 120°
+    67.0 ∠ 119.99999999999999°
         
     Parameters
     ----------
     magnitude:  float
                 The phasor magnitude to express.
-    angle:      float
+    phase:      float
                 The phasor angle to express, in degrees.
 
     Properties
@@ -53,18 +53,16 @@ class Phasor(complex):
                 The imaginary component of the complex value.
     """
 
-    def __new__(self, magnitude, angle=None):
-        """
-        Phasor Constructor.
-        """
+    def __new__(cls, magnitude, phase=None):
+        """Phasor Constructor."""
         # Handle Passing a Complex Type Directly to Phasor
         if isinstance(magnitude, complex):
             magnitude, ang_r = polar(magnitude)
-            angle = degrees(ang_r)
+            phase = degrees(ang_r)
         return complex.__new__(
-            self,
-            real=(magnitude * cos(radians(angle))),
-            imag=(magnitude * sin(radians(angle)))
+            cls,
+            real=(magnitude * cos(radians(phase))),
+            imag=(magnitude * sin(radians(phase)))
         )
 
     @property
